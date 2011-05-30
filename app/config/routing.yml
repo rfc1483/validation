@@ -1,0 +1,5 @@
+blog:
+  resource: "@AcmeBlogBundle/Resources/config/routing.yml"
+  
+homepage:
+  resource: "@AcmeHelloBundle/Resources/config/routing.yml"

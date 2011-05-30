@@ -1,0 +1,15 @@
+homepage:
+    pattern:  /
+    defaults: { _controller: AcmeHelloBundle:User:index }
+
+create:
+  pattern: /create/{name}
+  defaults: { _controller: AcmeHelloBundle:User:create }
+
+delete:
+  pattern: /delete/{id}
+  defaults: { _controller: AcmeHelloBundle:User:delete }
+
+show:
+  pattern: /show/
+  defaults: { _controller: AcmeHelloBundle:User:show }
