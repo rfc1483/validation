@@ -1,0 +1,23 @@
+<?php
+
+namespace Acme\FormBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ */
+class Users {
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $user_id;
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $name;
+
+}

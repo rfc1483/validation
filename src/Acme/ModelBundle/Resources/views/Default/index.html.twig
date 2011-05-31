@@ -1,1 +1,14 @@
-Hello!
+{% extends '::base.html.twig' %}
+
+
+{% block body %}
+<h1>Posts</h1>
+<ul class="Post">
+{% for post in posts %}
+    <li>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+    </li>
+{% endfor %}
+    </ul>
+{% endblock %}
