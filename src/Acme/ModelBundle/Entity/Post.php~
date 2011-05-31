@@ -1,0 +1,39 @@
+<?php
+
+namespace Acme\ModelBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ */
+class Post {
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $post_id;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $title;
+    
+    /**
+     * @ORM\Column(type="string", length="255")
+     */
+    protected $body;
+
+
+    /**
+     * Get post_id
+     *
+     * @return integer $postId
+     */
+    public function getPostId()
+    {
+        return $this->post_id;
+    }
+}

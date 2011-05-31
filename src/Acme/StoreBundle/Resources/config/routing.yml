@@ -1,0 +1,7 @@
+store_product:
+    pattern:  /
+    defaults: { _controller: AcmeStoreBundle:Default:index }
+    
+store_product_success:
+    pattern:  /success/
+    defaults: { _controller: AcmeStoreBundle:Default:success }

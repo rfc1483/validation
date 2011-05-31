@@ -1,0 +1,10 @@
+<form action="{{ path('store_product') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_errors(form) }}
+
+    {{ form_row(form.name) }}
+    {{ form_row(form.price) }}
+
+    {{ form_rest(form) }}
+
+    <input type="submit" />
+</form>
