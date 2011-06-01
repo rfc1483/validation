@@ -29,6 +29,32 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             if (substr($pathinfo, -1) !== '/') {
                 return $this->redirect($pathinfo.'/', 'homepage');
             }
+            return array (  '_controller' => 'AcmeHelloBundle:User:index',  '_route' => 'homepage',);
+        }
+
+        // create
+        if (0 === strpos($pathinfo, '/create') && preg_match('#^/create/(?P<name>[^/]+?)$#x', $pathinfo, $matches)) {
+            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Acme\\HelloBundle\\Controller\\UserController::createAction',)), array('_route' => 'create'));
+        }
+
+        // delete
+        if (0 === strpos($pathinfo, '/delete') && preg_match('#^/delete/(?P<id>[^/]+?)$#x', $pathinfo, $matches)) {
+            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Acme\\HelloBundle\\Controller\\UserController::deleteAction',)), array('_route' => 'delete'));
+        }
+
+        // show
+        if (rtrim($pathinfo, '/') === '/show') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'show');
+            }
+            return array (  '_controller' => 'Acme\\HelloBundle\\Controller\\UserController::showAction',  '_route' => 'show',);
+        }
+
+        // homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'homepage');
+            }
             return array (  '_controller' => 'AcmeFormBundle:Default:index',  '_route' => 'homepage',);
         }
 
@@ -61,33 +87,7 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             if (substr($pathinfo, -1) !== '/') {
                 return $this->redirect($pathinfo.'/', 'homepage');
             }
-            return array (  '_controller' => 'AcmeBlogBundle:Default:index',  '_route' => 'homepage',);
-        }
-
-        // homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'homepage');
-            }
-            return array (  '_controller' => 'Acme\\HelloBundle\\Controller\\UserController::indexAction',  '_route' => 'homepage',);
-        }
-
-        // create
-        if (0 === strpos($pathinfo, '/create') && preg_match('#^/create/(?P<name>[^/]+?)$#x', $pathinfo, $matches)) {
-            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Acme\\HelloBundle\\Controller\\UserController::createAction',)), array('_route' => 'create'));
-        }
-
-        // delete
-        if (0 === strpos($pathinfo, '/delete') && preg_match('#^/delete/(?P<id>[^/]+?)$#x', $pathinfo, $matches)) {
-            return array_merge($this->mergeDefaults($matches, array (  '_controller' => 'Acme\\HelloBundle\\Controller\\UserController::deleteAction',)), array('_route' => 'delete'));
-        }
-
-        // show
-        if (rtrim($pathinfo, '/') === '/show') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'show');
-            }
-            return array (  '_controller' => 'Acme\\HelloBundle\\Controller\\UserController::showAction',  '_route' => 'show',);
+            return array (  '_controller' => 'Acme\\BlogBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
         // _welcome

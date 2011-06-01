@@ -5,7 +5,7 @@ namespace Acme\FormBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Acme\FormBundle\Repository\UserRepository")
  */
 class Users {
 
@@ -19,6 +19,8 @@ class Users {
      * @ORM\Column(type="string", length="255")
      */
     protected $name;
+
+
 
 
     /**

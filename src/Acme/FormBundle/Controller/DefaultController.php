@@ -4,18 +4,21 @@ namespace Acme\FormBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Acme\FormBundle\Entity\Users;
+use Acme\FormBundle\Form\UsersType;
 
 class DefaultController extends Controller {
 
     public function indexAction() {
+//        $user = new Users();
+//        $user->setName("Duke Ellington");
+        
         $user = new Users();
+        $user->setName("Charlie Mingus");
         $user->setName("Duke Ellington");
+        $user->setName("Miles Davis");
 
         $form = $this->get('form.factory')
-                ->createBuilder('form', $user)
-                ->add('name', 'text')
-                ->getForm();
-
+                ->create(new UsersType(), $user);
         $request = $this->get('request');
 
         if ($request->getMethod() == 'POST') {
@@ -32,6 +35,6 @@ class DefaultController extends Controller {
         return $this->render('AcmeFormBundle:Default:index.html.twig', array(
             'form' => $form->createView()
         ));
+        
     }
-
 }

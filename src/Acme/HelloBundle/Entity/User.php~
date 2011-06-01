@@ -9,8 +9,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class User {
 
-    /** @ORM\Column(type="string") */
-    protected $new;
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -21,34 +19,4 @@ class User {
      * @ORM\Column(type="string", length="255")
      */
     protected $name;
-
-    /**
-     * Get id
-     *
-     * @return integer $id
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string $name
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
 }

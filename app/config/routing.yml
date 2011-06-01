@@ -1,3 +1,6 @@
+homepage:
+  resource: "@AcmeHelloBundle/Resources/config/routing.yml"
+  
 form:
   resource: "@AcmeFormBundle/Resources/config/routing.yml"
 
@@ -10,5 +13,3 @@ model:
 blog:
   resource: "@AcmeBlogBundle/Resources/config/routing.yml"
   
-homepage:
-  resource: "@AcmeHelloBundle/Resources/config/routing.yml"

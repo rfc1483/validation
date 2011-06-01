@@ -49,24 +49,4 @@ class User {
     {
         return $this->name;
     }
-
-    /**
-     * Set new
-     *
-     * @param string $new
-     */
-    public function setNew($new)
-    {
-        $this->new = $new;
-    }
-
-    /**
-     * Get new
-     *
-     * @return string $new
-     */
-    public function getNew()
-    {
-        return $this->new;
-    }
 }

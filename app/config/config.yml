@@ -47,7 +47,7 @@ doctrine:
               default:
                 connection: default
                 mappings:
-                  AcmeFormBundle: { type: annotation, dir: Entity/ }
+                  AcmeHelloBundle: { type: annotation, dir: Entity/ }
 
 # Swiftmailer Configuration
 swiftmailer:

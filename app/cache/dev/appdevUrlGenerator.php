@@ -14,11 +14,11 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
 {
     static private $declaredRouteNames = array(
        'homepage' => true,
-       'store_product' => true,
-       'store_product_success' => true,
        'create' => true,
        'delete' => true,
        'show' => true,
+       'store_product' => true,
+       'store_product_success' => true,
        '_welcome' => true,
        '_demo_login' => true,
        '_security_check' => true,
@@ -64,17 +64,7 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
 
     private function gethomepageRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'Acme\\HelloBundle\\Controller\\UserController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
-    }
-
-    private function getstore_productRouteInfo()
-    {
-        return array(array (), array (  '_controller' => 'Acme\\StoreBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
-    }
-
-    private function getstore_product_successRouteInfo()
-    {
-        return array(array (), array (  '_controller' => 'Acme\\StoreBundle\\Controller\\DefaultController::successAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/success/',  ),));
+        return array(array (), array (  '_controller' => 'Acme\\BlogBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
     }
 
     private function getcreateRouteInfo()
@@ -90,6 +80,16 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function getshowRouteInfo()
     {
         return array(array (), array (  '_controller' => 'Acme\\HelloBundle\\Controller\\UserController::showAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/show/',  ),));
+    }
+
+    private function getstore_productRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Acme\\StoreBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
+    }
+
+    private function getstore_product_successRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Acme\\StoreBundle\\Controller\\DefaultController::successAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/success/',  ),));
     }
 
     private function get_welcomeRouteInfo()

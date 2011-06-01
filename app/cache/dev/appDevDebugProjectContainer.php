@@ -302,10 +302,10 @@ class appDevDebugProjectContainer extends Container
         $c->setNamespace('sf2orm_default_3991bdef68424c922f42ea64b5f88692');
 
         $d = new \Doctrine\ORM\Mapping\Driver\DriverChain();
-        $d->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver(new \Symfony\Bundle\DoctrineBundle\Annotations\IndexedReader($this->get('annotation_reader')), array(0 => 'C:\\xampp\\htdocs\\orm\\src\\Acme\\FormBundle\\Entity')), 'Acme\\FormBundle\\Entity');
+        $d->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver(new \Symfony\Bundle\DoctrineBundle\Annotations\IndexedReader($this->get('annotation_reader')), array(0 => 'C:\\xampp\\htdocs\\orm\\src\\Acme\\HelloBundle\\Entity')), 'Acme\\HelloBundle\\Entity');
 
         $e = new \Doctrine\ORM\Configuration();
-        $e->setEntityNamespaces(array('AcmeFormBundle' => 'Acme\\FormBundle\\Entity'));
+        $e->setEntityNamespaces(array('AcmeHelloBundle' => 'Acme\\HelloBundle\\Entity'));
         $e->setMetadataCacheImpl($a);
         $e->setQueryCacheImpl($b);
         $e->setResultCacheImpl($c);
@@ -2626,7 +2626,7 @@ class appDevDebugProjectContainer extends Container
             'assetic.use_controller' => true,
             'assetic.read_from' => 'C:\\xampp\\htdocs\\orm\\app/../web',
             'assetic.write_to' => 'C:\\xampp\\htdocs\\orm\\app/../web',
-            'assetic.java.bin' => 'c:\\Windows\\system32\\java.EXE',
+            'assetic.java.bin' => 'c:\\WINDOWS\\system32\\java.EXE',
             'assetic.node.bin' => '/usr/bin/node',
             'assetic.sass.bin' => '/usr/bin/sass',
             'assetic.filter.cssrewrite.class' => 'Assetic\\Filter\\CssRewriteFilter',

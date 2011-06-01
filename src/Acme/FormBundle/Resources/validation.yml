@@ -1,0 +1,5 @@
+Acme\FormBundle\Entity\Users:
+  properties:
+    name:
+      - NotBlank: ~
+      - Min: > 10
