@@ -1,15 +1,15 @@
-homepage:
-  resource: "@AcmeHelloBundle/Resources/config/routing.yml"
-  
-form:
-  resource: "@AcmeFormBundle/Resources/config/routing.yml"
-
-store:
-  resource: "@AcmeStoreBundle/Resources/config/routing.yml"
-  
-model:
-  resource: "@AcmeModelBundle/Resources/config/routing.yml"
-
-blog:
-  resource: "@AcmeBlogBundle/Resources/config/routing.yml"
+#homepage:
+#  resource: "@AcmeHelloBundle/Resources/config/routing.yml"
+#  
+#form:
+#  resource: "@AcmeFormBundle/Resources/config/routing.yml"
+#
+#store:
+#  resource: "@AcmeStoreBundle/Resources/config/routing.yml"
+#  
+#model:
+#  resource: "@AcmeModelBundle/Resources/config/routing.yml"
+#
+#blog:
+#  resource: "@AcmeBlogBundle/Resources/config/routing.yml"
   
